@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foda-se Cia Iltda - Canção Maternal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            position: relative;
+        }
+
+        .background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -2;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 90%;
+            width: 400px;
+            text-align: center;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 20px auto;
+            object-fit: cover;
+            border: 3px solid white;
+        }
+
+        h1 {
+            margin: 10px 0;
+            font-size: clamp(20px, 5vw, 24px);
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .link-button {
+            background: rgba(255, 255, 255, 0.301);
+            padding: 15px 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(5px);
+        }
+
+        .link-button:hover {
+            background: rgba(37, 37, 37, 0.329);
+            transform: translateY(-2px);
+        }
+
+        .link-button i {
+            font-size: 28px;
+        }
+
+        .link-button span {
+            font-size: 14px;
+        }
+
+        .spotify { color: #1DB954; }
+        .deezer { color: #FF0092; }
+        .apple { color: #FB2D4D; }
+        .amazon { color: #00A8E1; }
+        .youtube { color: #FF0000; }
+        .tidal { color: #00FFFF; }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+
+            .link-button {
+                padding: 12px 8px;
+            }
+
+            .link-button i {
+                font-size: 24px;
+            }
+
+            .link-button span {
+                font-size: 12px;
+            }
+        }
+
+        .footer {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding: 20px 0;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+            opacity: 0.8;
+        }
+
+        .copyright {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <img src="CancaoMaternal.gif" alt="Background" class="background-video">
+    <div class="overlay"></div>
+
+    <div class="container">
+        <img src="logo.png" alt="Foda-se Cia Iltda" style="width: 200px; display: block; margin: 0 auto;">
+        <img src="CancaoMaternal.jpg" alt="Canção Maternal" style="width: 300px; margin: 20px 0; opacity: 0.9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        
+        <div class="links-container">
+            <a href="https://open.spotify.com/track/3qUpWptUSVDkR4A5tiuo0s" class="link-button">
+                <i class="fab fa-spotify spotify"></i>
+                <span>Ouça no Spotify</span>
+            </a>
+            <a href="https://deezer.page.link/fH6xVyuU9RJFSdwz7" class="link-button">
+                <i class="fab fa-deezer deezer"></i>
+                <span>Ouça no Deezer</span>
+            </a>
+            
+            <a href="https://music.apple.com/br/album/can%C3%A7%C3%A3o-maternal/1782458119?i=1782458120" class="link-button">
+                <i class="fab fa-apple apple"></i>
+                <span>Ouça no Apple Music</span>
+            </a>
+            
+            <a href="https://music.amazon.com.br/albums/B0DP3FG9Z2" class="link-button">
+                <i class="fab fa-amazon amazon"></i>
+                <span>Ouça no Amazon Music</span>
+            </a>
+            
+            <a href="https://music.youtube.com/watch?v=-TG_rBR-8ok" class="link-button">
+                <i class="fab fa-youtube youtube"></i>
+                <span>Ouça no YouTube Music</span>
+            </a>
+            
+            <a href="https://tidal.com/browse/track/401978474" class="link-button">
+                <i class="fas fa-water tidal"></i>
+                <span>Ouça no Tidal</span>
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://instagram.com/bandafodase" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://facebook.com/bandafci" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com/fodaseciailtda" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="http://bandafodase.com.br/" target="_blank">
+                <i class="fas fa-globe"></i>
+            </a>
+        </div>
+        <div class="copyright">
+            Todos os direitos reservados a Foda-se Cia ILTDA
+        </div>
+    </footer>
+</body>
+</html> 

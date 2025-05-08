@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /vnen.bandafodase.com.br/
+Allow: /
+Sitemap: https://bandafodase.com.br/sitemap.xml
